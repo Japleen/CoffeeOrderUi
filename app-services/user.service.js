@@ -35,7 +35,7 @@
         }
 
         function Update(user) {
-            return $http.put('http://localhost:8080/coffeeShop/api/users/createUser' + user.id, user).then(handleSuccess, handleError('Error updating user'));
+            return $http.put('/api/users' + user.id, user).then(handleSuccess, handleError('Error updating user'));
         }
 
         function Delete(id) {
